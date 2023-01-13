@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="text">
+      <h3>Задание 5</h3>
+      <p>
+        Написать код приложения, интерфейс которого состоит из двух input и
+        кнопки. В input можно ввести любое число.
+      </p>
+      <ul>
+        <ul>
+          <li>Заголовок первого <em>input</em> — «номер страницы».</li>
+          <li>Заголовок второго <em>input</em> — «лимит».</li>
+          <li>Заголовок кнопки — «запрос».</li>
+        </ul>
+      </ul>
+      <p>При клике на кнопку происходит следующее:</p>
+      <ul>
+        <ul>
+          <li>
+            Если число в первом <em>input</em> не попадает в диапазон от 1 до 10
+            или не является числом — выводить ниже текст «Номер страницы вне
+            диапазона от 1 до 10»;
+          </li>
+          <li>
+            Если число во втором <em>input</em> не попадает в диапазон от 1 до
+            10 или не является числом — выводить ниже текст «Лимит вне диапазона
+            от 1 до 10»;
+          </li>
+          <li>
+            Если и первый, и второй <em>input</em> не в диапазонах или не
+            являются числами — выводить ниже текст «Номер страницы и лимит вне
+            диапазона от 1 до 10»;
+          </li>
+          <li>
+            Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL
+            <span style="text-decoration: underline"
+              ><a
+                href="https://picsum.photos/v2/list?page=1&amp;limit=10"
+                target="_blank"
+                >https://picsum.photos/v2/list?page=1&amp;limit=10</a
+              ></span
+            >, где <em>GET</em>-параметр
+            <code style="background-color: #f0f8ff">page</code> — это число из
+            первого <em>input</em>, а <em>GET</em>-параметр
+            <code style="background-color: #f0f8ff">limit</code> — это введённое
+            число второго <em>input</em>.
+          </li>
+        </ul>
+      </ul>
+      <div class="grey-container">
+        <strong>Пример.</strong> Если пользователь ввёл 5 и 7, то запрос будет
+        вида
+        <a
+          href="https://picsum.photos/v2/list?page=5&amp;limit=7"
+          target="_blank"
+          ><span style="text-decoration: underline"
+            >https://picsum.photos/v2/list?page=5&amp;limit=7</span
+          ></a
+        >.
+      </div>
+      <p>
+        После получения данных вывести список картинок на экран. Если
+        пользователь перезагрузил страницу, то ему должны показываться картинки
+        из последнего успешно выполненного запроса (использовать localStorage).
+      </p>
+    </section>
+
+    <section class="solution">
+      <label for="name">номер страницы:</label>
+      <input class="inp1" type="text" name="input1" />
+      <label for="name">лимит:</label>
+      <input class="inp2" type="text" name="input2" />
+      <button class="btn" type="submit">Запрос</button>
+      <p></p>
+      <div class="result">Введите числа от 1 до 10</div>
+    </section>
+    <script async src="zadanie5.js"></script>
+  </body>
+</html>

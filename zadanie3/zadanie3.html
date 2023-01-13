@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="text">
+      <h3>Задание 3</h3>
+      <p>
+        Напишите код приложения, интерфейс которого представляет собой input и
+        кнопку. В input можно ввести любое число. При клике на кнопку происходит
+        следующее:
+      </p>
+      <ul>
+        <ul>
+          <li>
+            Если число не попадает в диапазон от 1 до 10 — выводить ниже текст
+            «число вне диапазона от 1 до 10».
+          </li>
+          <li>
+            Если число попадает в диапазон от 1 до 10 — сделать запрос c помощью
+            <em>XHR</em> по&nbsp;<em>URL</em>
+            <a href="https://picsum.photos/v2/list?limit=10" target="_blank"
+              ><span style="text-decoration: underline"
+                >https://picsum.photos/v2/list?limit=10</span
+              ></a
+            >, где <em>get</em>-параметр <em>limit</em> —&nbsp;это введённое
+            число.
+          </li>
+        </ul>
+      </ul>
+      <div class="grey-container">
+        <strong>Пример.</strong> Если пользователь ввёл 5, то запрос будет вида:
+        <a href="https://picsum.photos/v2/list?limit=5" target="_blank"
+          ><span style="text-decoration: underline"
+            >https://picsum.photos/v2/list?limit=5</span
+          ></a
+        >.
+      </div>
+      <p>После получения данных вывести ниже картинки на экран.</p>
+    </section>
+
+    <section class="solution">
+      <input class="inp" type="number" />
+      <button class="btn">Жми</button>
+      <p></p>
+      <div class="result">Введите число от 1 до 10</div>
+    </section>
+    <script async src="zadanie3.js"></script>
+  </body>
+</html>
